@@ -1,0 +1,8 @@
+# SCA - Static Code Analysis Tool Requirements
+# Core dependencies
+click>=8.0.0
+rich>=13.0.0
+PyYAML>=6.0.0
+tree-sitter-language-pack>=0.9.0
+rich-click>=1.8.0
+tk

@@ -1,0 +1,154 @@
+{
+  "file": "test.java",
+  "language": "java",
+  "file_extension": ".java",
+  "analysis_timestamp": "2025-11-20T15:51:58.793948",
+  "analysis_summary": {
+    "poor_error_handling": {
+      "findings_count": 9,
+      "status": "completed"
+    },
+    "unsafe_functions": {
+      "findings_count": 0,
+      "status": "completed"
+    },
+    "unsanitized_input": {
+      "findings_count": 0,
+      "status": "completed"
+    },
+    "weak_crypto": {
+      "findings_count": 0,
+      "status": "completed"
+    },
+    "auth": {
+      "findings_count": 0,
+      "status": "completed"
+    }
+  },
+  "total_findings": 9,
+  "findings": {
+    "poor_error_handling": [
+      {
+        "line": 34,
+        "code_snippet": "unsafeDatabaseConnection();",
+        "Description": "Not closing resources in finally may leak them.",
+        "Severity": "medium",
+        "Remediation": "Use try-with-resources or close in finally.\n",
+        "OWASP": "A06:2021 – Vulnerable and Outdated Components",
+        "Reference": [
+          "https://www.baeldung.com/java-try-with-resources"
+        ],
+        "rule_id": "missing-finally-close",
+        "module": "poor_error_handling"
+      },
+      {
+        "line": 35,
+        "code_snippet": "safeDatabaseConnection(); // This would fail to connect, proving it's not hardcoded here.",
+        "Description": "Not closing resources in finally may leak them.",
+        "Severity": "medium",
+        "Remediation": "Use try-with-resources or close in finally.\n",
+        "OWASP": "A06:2021 – Vulnerable and Outdated Components",
+        "Reference": [
+          "https://www.baeldung.com/java-try-with-resources"
+        ],
+        "rule_id": "missing-finally-close",
+        "module": "poor_error_handling"
+      },
+      {
+        "line": 105,
+        "code_snippet": "public static void unsafeDatabaseConnection() {",
+        "Description": "Not closing resources in finally may leak them.",
+        "Severity": "medium",
+        "Remediation": "Use try-with-resources or close in finally.\n",
+        "OWASP": "A06:2021 – Vulnerable and Outdated Components",
+        "Reference": [
+          "https://www.baeldung.com/java-try-with-resources"
+        ],
+        "rule_id": "missing-finally-close",
+        "module": "poor_error_handling"
+      },
+      {
+        "line": 110,
+        "code_snippet": "System.out.println(\"Unsafe Connection: Password is visible in the code.\");",
+        "Description": "Not closing resources in finally may leak them.",
+        "Severity": "medium",
+        "Remediation": "Use try-with-resources or close in finally.\n",
+        "OWASP": "A06:2021 – Vulnerable and Outdated Components",
+        "Reference": [
+          "https://www.baeldung.com/java-try-with-resources"
+        ],
+        "rule_id": "missing-finally-close",
+        "module": "poor_error_handling"
+      },
+      {
+        "line": 111,
+        "code_snippet": "// Connection conn = DriverManager.getConnection(url, user, password);",
+        "Description": "Not closing resources in finally may leak them.",
+        "Severity": "medium",
+        "Remediation": "Use try-with-resources or close in finally.\n",
+        "OWASP": "A06:2021 – Vulnerable and Outdated Components",
+        "Reference": [
+          "https://www.baeldung.com/java-try-with-resources"
+        ],
+        "rule_id": "missing-finally-close",
+        "module": "poor_error_handling"
+      },
+      {
+        "line": 118,
+        "code_snippet": "public static void safeDatabaseConnection() {",
+        "Description": "Not closing resources in finally may leak them.",
+        "Severity": "medium",
+        "Remediation": "Use try-with-resources or close in finally.\n",
+        "OWASP": "A06:2021 – Vulnerable and Outdated Components",
+        "Reference": [
+          "https://www.baeldung.com/java-try-with-resources"
+        ],
+        "rule_id": "missing-finally-close",
+        "module": "poor_error_handling"
+      },
+      {
+        "line": 125,
+        "code_snippet": "System.out.println(\"Safe Connection: Could not read DB_PASSWORD environment variable.\");",
+        "Description": "Not closing resources in finally may leak them.",
+        "Severity": "medium",
+        "Remediation": "Use try-with-resources or close in finally.\n",
+        "OWASP": "A06:2021 – Vulnerable and Outdated Components",
+        "Reference": [
+          "https://www.baeldung.com/java-try-with-resources"
+        ],
+        "rule_id": "missing-finally-close",
+        "module": "poor_error_handling"
+      },
+      {
+        "line": 129,
+        "code_snippet": "System.out.println(\"Safe Connection: Password is loaded from environment.\");",
+        "Description": "Not closing resources in finally may leak them.",
+        "Severity": "medium",
+        "Remediation": "Use try-with-resources or close in finally.\n",
+        "OWASP": "A06:2021 – Vulnerable and Outdated Components",
+        "Reference": [
+          "https://www.baeldung.com/java-try-with-resources"
+        ],
+        "rule_id": "missing-finally-close",
+        "module": "poor_error_handling"
+      },
+      {
+        "line": 130,
+        "code_snippet": "// Connection conn = DriverManager.getConnection(url, user, password);",
+        "Description": "Not closing resources in finally may leak them.",
+        "Severity": "medium",
+        "Remediation": "Use try-with-resources or close in finally.\n",
+        "OWASP": "A06:2021 – Vulnerable and Outdated Components",
+        "Reference": [
+          "https://www.baeldung.com/java-try-with-resources"
+        ],
+        "rule_id": "missing-finally-close",
+        "module": "poor_error_handling"
+      }
+    ],
+    "unsafe_functions": [],
+    "unsanitized_input": [],
+    "weak_crypto": [],
+    "auth": []
+  }
+}
